@@ -1,0 +1,29 @@
+{
+  "name": "messages-app-server",
+  "version": "0.0.1",
+  "description": "The server side to my Messages App project.",
+  "main": "index.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NLSteveO/MessagesApp.git"
+  },
+  "author": "NLSteveO",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NLSteveO/MessagesApp/issues"
+  },
+  "homepage": "https://github.com/NLSteveO/MessagesApp#readme",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.3.0",
+    "eslint-config-mitmaro": "^4.0.0",
+    "eslint-plugin-babel": "^5.1.0"
+  }
+}
