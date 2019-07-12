@@ -1,0 +1,4 @@
+CREATE DATABASE "messages_app";
+\connect "messages_app";
+CREATE USER messenger WITH PASSWORD 'messenger';
+GRANT ALL PRIVILEGES ON DATABASE "messages_app" TO messenger;
