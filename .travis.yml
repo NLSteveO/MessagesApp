@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "10"
+# command to install dependencies
+install:
+  - cd server
+  - npm ci
+  - cd ../client
+  - npm ci
+# commands to run linter
+script:
+  - echo "no tests!"
+  - cd ../server
+  - echo "npm run lint" # Actually run once there is code to run it against
+  - cd ../client
+  - echo "npm run lint" # Actually run once there is code to run it against
