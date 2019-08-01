@@ -11,6 +11,6 @@ install:
 script:
   - echo "no tests!"
   - cd ../server
-  - echo "npm run lint" # Actually run once there is code to run it against
+  - npm run lint
   - cd ../client
   - echo "npm run lint" # Actually run once there is code to run it against
