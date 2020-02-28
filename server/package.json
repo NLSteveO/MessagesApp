@@ -16,10 +16,15 @@
   "homepage": "https://github.com/NLSteveO/MessagesApp#readme",
   "scripts": {
     "start": "node src/index.js",
+    "initialize": "node scripts/database.js initialize",
+    "seed": "node scripts/database.js seed",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ."
   },
-  "dependencies": {},
+  "dependencies": {
+    "bluebird": "^3.5.5",
+    "pg-promise": "^8.7.2"
+  },
   "devDependencies": {
     "babel-eslint": "^10.0.2",
     "eslint": "^6.0.1",
