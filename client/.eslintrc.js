@@ -12,6 +12,16 @@ module.exports = eslintConfig(
     root: true,
     plugins: [
       'react'
-    ]
+    ],
+    rules: {
+      indent: [
+        "error",
+        2
+      ],
+      'react/jsx-indent': [
+        "error",
+        2
+      ]
+    }
   }
 );
