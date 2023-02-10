@@ -2,8 +2,8 @@
 'use strict';
 
 const path = require('path');
-const promise = require('bluebird');
-const pgPromise = require('pg-promise')({ promiseLib: promise });
+const Promise = require('bluebird');
+const pgPromise = require('pg-promise')({ promiseLib: Promise });
 const database = pgPromise('postgres://messenger:messenger@127.0.0.1:5432/messages_app');
 
 function getQueryFile(file) {

@@ -26,7 +26,7 @@ class Messages {
 
   async create({ text }) {
     try {
-      return await this._database.none(`INSERT INTO messages(text) VALUES(${text});`, { text });
+      return await this._database.none(`INSERT INTO messages(text) VALUES('${text}');`, { text });
     } catch (error) {
       throw new Error(`Failed to create message with ${text}. Error: ${error}`);
     }
@@ -34,7 +34,7 @@ class Messages {
 
   async patch(id, { text }) {
     try {
-      return await this._database.none(`UPDATE messages SET text = ${text} WHERE id = ${id};`, { id, text });
+      return await this._database.none(`UPDATE messages SET text = '${text}' WHERE id = ${id};`, { id, text });
     } catch (error) {
       throw new Error(`Failed to update message with ${text} for message with id ${id}. Error: ${error}`);
     }

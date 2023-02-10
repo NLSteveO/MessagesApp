@@ -4,7 +4,7 @@ const eslintConfig = require('eslint-config-mitmaro');
 
 module.exports = eslintConfig(
   [
-    'babel',
+    '@babel',
     'ecmascript-9',
     'react'
   ],
