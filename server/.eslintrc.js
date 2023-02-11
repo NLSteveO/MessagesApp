@@ -8,6 +8,20 @@ module.exports = eslintConfig(
     'node'
   ],
   {
-    root: true
+    root: true,
+    rules: {
+      indent: [
+        "error",
+        2
+      ],
+      'brace-style': [
+        "error",
+        "1tbs"
+      ],
+      'object-curly-spacing': [
+        "error",
+        "always"
+      ]
+    }
   }
 );
