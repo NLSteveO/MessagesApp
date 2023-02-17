@@ -31,16 +31,24 @@ async function seed() {
     });
 }
 
-if (process.argv.length < 3) {
-  console.log('An argument of initialize or seed must be provided.');
-} else if (process.argv[2] === 'initialize') {
-  initialize().catch((error) => {
-    console.error(error);
-  });
-} else if (process.argv[2] === 'seed') {
-  seed().catch((error) => {
-    console.error(error);
-  });
-} else {
-  console.log('The argument provided was invalid.');
+async function main() {
+  if (process.argv.length < 3) {
+    console.log('An argument of initialize or seed must be provided.');
+  } else if (process.argv[2] === 'initialize') {
+    try {
+      await initialize();
+    } catch (error) {
+      console.error('Initialise Error:', error);
+    }
+  } else if (process.argv[2] === 'seed') {
+    try {
+      await seed();
+    } catch (error) {
+      console.error('Seed Error:', error);
+    }
+  } else {
+    console.log('The argument provided was invalid.');
+  }
 }
+
+main();
